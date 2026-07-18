@@ -1,0 +1,16 @@
+<% layout("/layouts/boilerplate") -%>
+    
+<div class="booking-card">
+    <% bookings.forEach(booking => { %>
+        <div class="card" style="width: 18rem;">
+        <h3><%= booking.listing.title %></h3>
+        <img src="<%= booking.listing.image.url %>" 
+        class="card-img-top" alt="image" height="300" width="300">
+        <div class="card-body">
+            <p class="card-text">Check In: <%= booking.checkIn.toDateString() %></p>
+            <p class="card-text">Check Out: <%= booking.checkOut.toDateString() %></p>
+            <p class="card-text">Total: ₹<%= booking.totalPrice %></p>
+        </div>
+        </div>
+    <% }) %>
+</div>

@@ -1,0 +1,86 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+    <br><br>
+    <h1 style="text-align: center;">Create New Listing</h1>
+    <br>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" placeholder="enter title" name="listing[title]" class="form-control" required>
+            
+            <div class="valid-feedback">Valid Title</div>
+            <div class="invalid-feedback">Title is required</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description class="form-label">Description</label>
+            <textarea rows="5" cols="20" name="listing[description]" placeholder="enter description" class="form-control" required></textarea>
+
+            <div class="valid-feedback">Valid Description</div>
+            <div class="invalid-feedback">Description is required</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select class="form-select" id="category" name="listing[category]" required>
+            <option value="" selected disabled>Select Category</option>
+            <option value="rooms">Rooms</option>
+            <option value="cities">Cities</option>
+            <option value="mountains">Mountains</option>
+            <option value="luxury">Luxury</option>
+            <option value="pool">Pool</option>
+            <option value="lakefront">Lakefront</option>
+            <option value="farm">Farm</option>
+            <option value="arctic">Arctic</option>
+            <option value="beach">Beach</option>
+            <option value="other">Other</option>
+            </select>
+
+            <div class="invalid-feedback">Category is required</div>
+        </div>
+    
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" name="listing[image]" class="form-control" required>
+
+            <div class="invalid-feedback">Image is required</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" placeholder="enter price" name="listing[price]" class="form-control" required>
+                
+                <div class="valid-feedback">Valid Price</div>
+                <div class="invalid-feedback">Price is required</div>
+                </div>
+            </div>
+        
+            <div class="col-md-8 col-sm-12">
+                <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" placeholder="enter country" name="listing[country]" class="form-control" required>
+                
+                <div class="valid-feedback">Valid Country</div>
+                <div class="invalid-feedback">Country is required</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" placeholder="enter location" name="listing[location]" class="form-control" required>
+            
+            <div class="valid-feedback">Valid Location</div>
+            <div class="invalid-feedback">Location is required</div>
+        </div>
+        <br>
+        <button class="btn btn-dark add-btn">Add Listing</button>
+        <br><br>
+    </form>
+    </div>
+    </div>
+</body>
